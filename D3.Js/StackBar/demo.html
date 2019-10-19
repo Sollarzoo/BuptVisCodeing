@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Page Template</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div>
+			<!-- graphStart -->
+			<div id="stack-bar">
+			</div>
+			<!-- graphEnd -->
+			<svg id='testSvg'></svg>
+		  index!!!!???
+	  </div>
+		<script type="text/javascript">
+		var w = 600;//画布宽度
+		var h = 500;//画布长度
+		var barWidth = 80
+		var padding = {top: 40, right: 40, bottom: 40, left:40}; //定义画布的内边距
+		var dataset; //声明数据集
+		var keys = ['apple', 'samsung', 'huawei', 'oppo', 'xiaomi', 'others']
+		var stack = d3.stack().keys(keys)
+		var colorList = ['#38CCCB', '#0074D9', '#2FCC40', '#FEDC00', '#FF4036', '#eeeeee']
+
+		/* 载入mperday.json文件 */ //fetch模块
+		d3.json("rawData.json").then(function(json) {
+			var data = json
+			
+			dataset = stack(data) //使用stack方法，生成[y0,y1]坐标
+			console.log(dataset,'dataset')
+			/* 先画画布,注意定义画布大小 */
+			var svg = d3.select('#stack-bar').append('svg').attr('id', 'stack-bar__svg')
+			.attr('width', w).attr('height', h)
+			
+			function getTimePointList(d) {
+				return d.year + '-' +  d.quarter
+			}
+
+			//专门取list[0]的min
+			function stackMin(list) {
+				return d3.min(list, listItem => listItem ? listItem[0] : 0)
+			}
+
+			//专门取list[1]的max
+			function stackMax(list) {
+				return d3.max(list, listItem => listItem ? listItem[1] : 0)
+			}
+			
+			/* 绘制坐标轴的比例尺 */
+			console.log(data.map(getTimePointList),'-=-=----------------')
+			var xScale = d3.scalePoint().domain(['2017-2', '2017-3', '2017-4', '2018-1']).range([0, w-padding.left*2]).padding(0.4) //保留疑问
+			var yScale = d3.scaleLinear().domain([d3.max(dataset, stackMax), d3.min(dataset, stackMin)]).range([0 ,h-padding.top*2])
+
+			/* 绘制坐标 */
+			var xAixs = d3.axisBottom(xScale)
+			svg.append('g').attr('transform', 'translate(40, 460)') //以左上角为原点
+			.call(xAixs)
+
+			/* 绘制坐标 */
+			var yAixs = d3.axisLeft(yScale)
+			svg.append('g').attr('transform', 'translate(40, 40)')
+			.call(yAixs)
+
+			/* 开始绘制rect！注意rect要在g里边绘制 */
+			var g = svg.selectAll('.group').data(dataset).enter()
+			.append('g').attr('fill', (d, i)=> {
+				return colorList[i]
+			})
+			.attr('class','group')
+			.selectAll('rect')
+			.data(d=>d).enter()
+			.append('rect')
+			.attr('x', (d)=> {
+				console.log(getTimePointList(d.data),'xxx')
+				return padding.left + xScale(getTimePointList(d.data)) - barWidth/2
+			})
+			.attr('y', (d)=> {
+				console.log(d[1],'d[1]')
+				console.log(yScale(d[1]), 'yScale(d[1])')
+				return padding.top + yScale(d[1])
+			})
+			.attr('width', barWidth)
+			.attr('height', d=> {
+				console.log(d[0], 'd[0]')
+				console.log(yScale(d[0]), 'yScale(d[0])')
+				console.log(yScale(d[0]) - yScale(d[1]),'------')
+				return yScale(d[0]) - yScale(d[1])
+			})
+		})
+
+		var testData = [1,2,3]
+		var testSvg = d3.select('#testSvg').attr('width', 600).attr('height', 500)
+		testSvg.selectAll('.testRect').data(testData).enter().append('rect').attr('class','testRect')
+		.attr('x', (d,i)=> {
+			return 50*i
+		})
+		.attr('y', 10)
+		.attr('width', 20)
+		.attr('height', (d,i)=>{return 50*(i+1)})
+		.attr('fill', 'pink')
+		</script>
+	</body>
+</html>
