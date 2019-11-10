@@ -19,6 +19,7 @@ text.active {
     <option value="cluster">by cluster</option>
 </select>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="fisheye.js"></script>
 <script>
 var margin = {top: 80, right: 20, bottom: 20, left: 80},
     width = 720,
@@ -90,6 +91,7 @@ d3.json("miserables.json", function (miserables) {
     .attr("class", "row")
     .attr("transform", function(d, i) { return "translate(0," + x(i) + ")"; })
     .each(function(aa) {
+        
         console.log(aa.filter(function(d) { return d.z; }));
         var cell = d3.select(this).selectAll("rect")
         .data(aa.filter(function(d) { return d.z; }))  // 返回 d.z > 0 的所有对象
@@ -97,8 +99,8 @@ d3.json("miserables.json", function (miserables) {
         .append("rect")
         .attr("x", function(d) { return x(d.x); })
         //.atrr("y", 0)
-        .attr("width", x.rangeBand()-1)
         .attr("height", x.rangeBand()-1)
+        .attr("width", x.rangeBand()-1)
         .style("fill", function(d) { return nodes[d.x].group == nodes[d.y].group ? c(nodes[d.x].group) : null; }) 
         //三目运算符 根据不同的条件，执行不同的操作/返回不同的值 return 1==2 ? a : b
         // 同一个group才有颜色 不同组显示黑色
@@ -109,6 +111,36 @@ d3.json("miserables.json", function (miserables) {
         //.on("mouseover", mouseover)
         //.on("mouseout", mouseout);
     });
+
+    row.append("line")
+    .attr("x2", width);
+
+    row.append("text")
+    .attr("x", -6)
+    .attr("y", x.rangeBand() / 2)
+    .attr("dy", "10px")
+    .attr("text-anchor", "start")
+    .text(function(d, i) { return nodes[i].name; });
+
+    var column = svg.selectAll(".column")
+    .data(matrix)
+    .enter()
+    .append("g")
+    .attr("class", "column")
+    .attr("transform", function(d, i) { return "translate(" + x(i) + ",0)rotate(-90, 0 0)"; }); 
+
+    column.append("line")
+    .attr("x1", -width)
+
+    column.append("text")
+    .attr("x", 0)
+    .attr("y", x.rangeBand() / 2)
+    .attr("dy", x.rangeBand())
+    .attr("font-size", 10)
+    .attr("text-anchor", "end")
+    .style("fill", "black")
+    //.style("stroke", "white")
+    .text(function(d, i) { return "hhh"/*nodes[i].name; console.log(nodes[i].name)*/ });
 })
 </script>
 </body>
