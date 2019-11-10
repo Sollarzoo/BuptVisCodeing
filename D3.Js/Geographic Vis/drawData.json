@@ -1,0 +1,2301 @@
+{
+    "Afghanistan": {
+        "privacy": 21,
+        "count": 5,
+        "opinion": [
+            1,
+            0,
+            1,
+            2,
+            1
+        ]
+    },
+    "Albania": {
+        "privacy": 204,
+        "count": 44,
+        "opinion": [
+            21,
+            4,
+            15,
+            2,
+            2
+        ]
+    },
+    "Algeria": {
+        "privacy": 2143,
+        "count": 428,
+        "opinion": [
+            151,
+            75,
+            131,
+            48,
+            23
+        ]
+    },
+    "American Samoa": {
+        "privacy": 0,
+        "count": 0,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Andorra": {
+        "privacy": 34,
+        "count": 6,
+        "opinion": [
+            5,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Angola": {
+        "privacy": 52,
+        "count": 12,
+        "opinion": [
+            2,
+            4,
+            3,
+            2,
+            1
+        ]
+    },
+    "Anguilla": {
+        "privacy": 3,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Antigua and Barbuda": {
+        "privacy": 0,
+        "count": 0,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Argentina": {
+        "privacy": 11545,
+        "count": 2083,
+        "opinion": [
+            918,
+            228,
+            521,
+            268,
+            148
+        ]
+    },
+    "Armenia": {
+        "privacy": 34,
+        "count": 7,
+        "opinion": [
+            3,
+            2,
+            1,
+            0,
+            1
+        ]
+    },
+    "Aruba": {
+        "privacy": 6,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Australia": {
+        "privacy": 9984,
+        "count": 2004,
+        "opinion": [
+            996,
+            297,
+            350,
+            123,
+            238
+        ]
+    },
+    "Austria": {
+        "privacy": 8567,
+        "count": 1671,
+        "opinion": [
+            842,
+            214,
+            351,
+            114,
+            150
+        ]
+    },
+    "Azerbaijan": {
+        "privacy": 4,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Bahamas": {
+        "privacy": 21,
+        "count": 3,
+        "opinion": [
+            1,
+            1,
+            1,
+            0,
+            0
+        ]
+    },
+    "Bahrain": {
+        "privacy": 51,
+        "count": 13,
+        "opinion": [
+            9,
+            1,
+            1,
+            1,
+            1
+        ]
+    },
+    "Bangladesh": {
+        "privacy": 1099,
+        "count": 217,
+        "opinion": [
+            101,
+            28,
+            62,
+            21,
+            5
+        ]
+    },
+    "Barbados": {
+        "privacy": 70,
+        "count": 12,
+        "opinion": [
+            5,
+            3,
+            4,
+            0,
+            0
+        ]
+    },
+    "Belarus": {
+        "privacy": 115,
+        "count": 23,
+        "opinion": [
+            12,
+            4,
+            4,
+            2,
+            1
+        ]
+    },
+    "Belgium": {
+        "privacy": 10547,
+        "count": 1999,
+        "opinion": [
+            973,
+            254,
+            444,
+            86,
+            242
+        ]
+    },
+    "Belize": {
+        "privacy": 35,
+        "count": 6,
+        "opinion": [
+            4,
+            0,
+            1,
+            0,
+            1
+        ]
+    },
+    "Benin": {
+        "privacy": 246,
+        "count": 49,
+        "opinion": [
+            19,
+            12,
+            10,
+            6,
+            2
+        ]
+    },
+    "Bhutan": {
+        "privacy": 6,
+        "count": 2,
+        "opinion": [
+            2,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Bolivia": {
+        "privacy": 1222,
+        "count": 239,
+        "opinion": [
+            100,
+            25,
+            64,
+            36,
+            14
+        ]
+    },
+    "Bosnia and Herzegovina": {
+        "privacy": 190,
+        "count": 34,
+        "opinion": [
+            14,
+            6,
+            11,
+            3,
+            0
+        ]
+    },
+    "Botswana": {
+        "privacy": 43,
+        "count": 7,
+        "opinion": [
+            2,
+            3,
+            1,
+            1,
+            0
+        ]
+    },
+    "Brazil": {
+        "privacy": 49504,
+        "count": 9381,
+        "opinion": [
+            3986,
+            1525,
+            2069,
+            1113,
+            688
+        ]
+    },
+    "Brunei Darussalam": {
+        "privacy": 43,
+        "count": 11,
+        "opinion": [
+            5,
+            2,
+            3,
+            0,
+            1
+        ]
+    },
+    "Bulgaria": {
+        "privacy": 573,
+        "count": 105,
+        "opinion": [
+            43,
+            22,
+            29,
+            5,
+            6
+        ]
+    },
+    "Burkina Faso": {
+        "privacy": 162,
+        "count": 32,
+        "opinion": [
+            14,
+            9,
+            2,
+            2,
+            5
+        ]
+    },
+    "Burundi": {
+        "privacy": 63,
+        "count": 11,
+        "opinion": [
+            5,
+            3,
+            0,
+            3,
+            0
+        ]
+    },
+    "Cambodia": {
+        "privacy": 124,
+        "count": 26,
+        "opinion": [
+            13,
+            6,
+            6,
+            0,
+            1
+        ]
+    },
+    "Cameroon": {
+        "privacy": 726,
+        "count": 148,
+        "opinion": [
+            72,
+            28,
+            20,
+            16,
+            12
+        ]
+    },
+    "Canada": {
+        "privacy": 17015,
+        "count": 3473,
+        "opinion": [
+            1741,
+            440,
+            664,
+            196,
+            432
+        ]
+    },
+    "Cape Verde": {
+        "privacy": 27,
+        "count": 4,
+        "opinion": [
+            1,
+            0,
+            1,
+            2,
+            0
+        ]
+    },
+    "Cayman Islands": {
+        "privacy": 10,
+        "count": 2,
+        "opinion": [
+            0,
+            1,
+            1,
+            0,
+            0
+        ]
+    },
+    "Central African Republic": {
+        "privacy": 2,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            1
+        ]
+    },
+    "Chad": {
+        "privacy": 15,
+        "count": 4,
+        "opinion": [
+            0,
+            0,
+            3,
+            1,
+            0
+        ]
+    },
+    "Chile": {
+        "privacy": 5547,
+        "count": 1039,
+        "opinion": [
+            494,
+            96,
+            277,
+            92,
+            80
+        ]
+    },
+    "China": {
+        "privacy": 365,
+        "count": 72,
+        "opinion": [
+            31,
+            22,
+            12,
+            4,
+            3
+        ]
+    },
+    "Christmas Island": {
+        "privacy": 2,
+        "count": 1,
+        "opinion": [
+            0,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Colombia": {
+        "privacy": 8582,
+        "count": 1646,
+        "opinion": [
+            843,
+            178,
+            386,
+            152,
+            87
+        ]
+    },
+    "Comoros": {
+        "privacy": 7,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            0,
+            1,
+            0
+        ]
+    },
+    "Congo, The Democratic Republic of the": {
+        "privacy": 121,
+        "count": 22,
+        "opinion": [
+            9,
+            3,
+            4,
+            3,
+            3
+        ]
+    },
+    "Costa Rica": {
+        "privacy": 1711,
+        "count": 315,
+        "opinion": [
+            159,
+            34,
+            76,
+            27,
+            19
+        ]
+    },
+    "Cote D'Ivoire": {
+        "privacy": 800,
+        "count": 155,
+        "opinion": [
+            86,
+            40,
+            14,
+            9,
+            6
+        ]
+    },
+    "Croatia": {
+        "privacy": 742,
+        "count": 141,
+        "opinion": [
+            59,
+            24,
+            37,
+            13,
+            8
+        ]
+    },
+    "Cuba": {
+        "privacy": 280,
+        "count": 58,
+        "opinion": [
+            29,
+            4,
+            13,
+            11,
+            1
+        ]
+    },
+    "Curacao": {
+        "privacy": 34,
+        "count": 6,
+        "opinion": [
+            1,
+            2,
+            2,
+            0,
+            1
+        ]
+    },
+    "Cyprus": {
+        "privacy": 138,
+        "count": 29,
+        "opinion": [
+            11,
+            5,
+            4,
+            5,
+            4
+        ]
+    },
+    "Czech Republic": {
+        "privacy": 617,
+        "count": 120,
+        "opinion": [
+            59,
+            23,
+            28,
+            2,
+            8
+        ]
+    },
+    "Denmark": {
+        "privacy": 834,
+        "count": 180,
+        "opinion": [
+            101,
+            24,
+            33,
+            7,
+            15
+        ]
+    },
+    "Djibouti": {
+        "privacy": 19,
+        "count": 4,
+        "opinion": [
+            1,
+            1,
+            1,
+            1,
+            0
+        ]
+    },
+    "Dominica": {
+        "privacy": 3,
+        "count": 1,
+        "opinion": [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Dominican Republic": {
+        "privacy": 816,
+        "count": 162,
+        "opinion": [
+            74,
+            17,
+            35,
+            31,
+            5
+        ]
+    },
+    "Ecuador": {
+        "privacy": 3973,
+        "count": 790,
+        "opinion": [
+            360,
+            72,
+            225,
+            86,
+            47
+        ]
+    },
+    "Egypt": {
+        "privacy": 399,
+        "count": 81,
+        "opinion": [
+            33,
+            16,
+            22,
+            6,
+            4
+        ]
+    },
+    "El Salvador": {
+        "privacy": 1383,
+        "count": 265,
+        "opinion": [
+            123,
+            31,
+            71,
+            29,
+            11
+        ]
+    },
+    "Equatorial Guinea": {
+        "privacy": 13,
+        "count": 2,
+        "opinion": [
+            1,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Estonia": {
+        "privacy": 240,
+        "count": 42,
+        "opinion": [
+            16,
+            10,
+            10,
+            2,
+            4
+        ]
+    },
+    "Ethiopia": {
+        "privacy": 75,
+        "count": 12,
+        "opinion": [
+            3,
+            5,
+            3,
+            1,
+            0
+        ]
+    },
+    "Fiji": {
+        "privacy": 58,
+        "count": 12,
+        "opinion": [
+            10,
+            1,
+            0,
+            1,
+            0
+        ]
+    },
+    "Finland": {
+        "privacy": 948,
+        "count": 195,
+        "opinion": [
+            99,
+            34,
+            36,
+            8,
+            18
+        ]
+    },
+    "France": {
+        "privacy": 129801,
+        "count": 24785,
+        "opinion": [
+            13044,
+            2833,
+            5539,
+            913,
+            2456
+        ]
+    },
+    "French Guiana": {
+        "privacy": 173,
+        "count": 34,
+        "opinion": [
+            9,
+            6,
+            10,
+            3,
+            6
+        ]
+    },
+    "French Polynesia": {
+        "privacy": 360,
+        "count": 72,
+        "opinion": [
+            35,
+            8,
+            19,
+            3,
+            7
+        ]
+    },
+    "Gabon": {
+        "privacy": 146,
+        "count": 25,
+        "opinion": [
+            14,
+            4,
+            5,
+            2,
+            0
+        ]
+    },
+    "Gambia": {
+        "privacy": 12,
+        "count": 2,
+        "opinion": [
+            1,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Georgia": {
+        "privacy": 36,
+        "count": 6,
+        "opinion": [
+            2,
+            2,
+            1,
+            0,
+            1
+        ]
+    },
+    "Germany": {
+        "privacy": 96515,
+        "count": 19278,
+        "opinion": [
+            9774,
+            2644,
+            3850,
+            1420,
+            1590
+        ]
+    },
+    "Ghana": {
+        "privacy": 284,
+        "count": 63,
+        "opinion": [
+            35,
+            13,
+            5,
+            6,
+            4
+        ]
+    },
+    "Gibraltar": {
+        "privacy": 11,
+        "count": 2,
+        "opinion": [
+            1,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Greece": {
+        "privacy": 1496,
+        "count": 298,
+        "opinion": [
+            161,
+            37,
+            60,
+            22,
+            18
+        ]
+    },
+    "Grenada": {
+        "privacy": 0,
+        "count": 0,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Guadeloupe": {
+        "privacy": 385,
+        "count": 74,
+        "opinion": [
+            33,
+            11,
+            18,
+            3,
+            9
+        ]
+    },
+    "Guam": {
+        "privacy": 21,
+        "count": 3,
+        "opinion": [
+            0,
+            1,
+            1,
+            0,
+            1
+        ]
+    },
+    "Guatemala": {
+        "privacy": 1336,
+        "count": 279,
+        "opinion": [
+            150,
+            31,
+            67,
+            24,
+            7
+        ]
+    },
+    "Guernsey": {
+        "privacy": 58,
+        "count": 9,
+        "opinion": [
+            3,
+            4,
+            0,
+            2,
+            0
+        ]
+    },
+    "Guinea": {
+        "privacy": 80,
+        "count": 15,
+        "opinion": [
+            3,
+            7,
+            1,
+            3,
+            1
+        ]
+    },
+    "Guyana": {
+        "privacy": 49,
+        "count": 11,
+        "opinion": [
+            5,
+            1,
+            3,
+            2,
+            0
+        ]
+    },
+    "Haiti": {
+        "privacy": 57,
+        "count": 13,
+        "opinion": [
+            5,
+            2,
+            2,
+            3,
+            1
+        ]
+    },
+    "Holy See (Vatican City State)": {
+        "privacy": 6,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Honduras": {
+        "privacy": 599,
+        "count": 122,
+        "opinion": [
+            57,
+            20,
+            24,
+            13,
+            8
+        ]
+    },
+    "Hungary": {
+        "privacy": 469,
+        "count": 90,
+        "opinion": [
+            39,
+            21,
+            19,
+            5,
+            6
+        ]
+    },
+    "Iceland": {
+        "privacy": 140,
+        "count": 24,
+        "opinion": [
+            14,
+            0,
+            4,
+            3,
+            3
+        ]
+    },
+    "India": {
+        "privacy": 13620,
+        "count": 2706,
+        "opinion": [
+            1280,
+            416,
+            638,
+            256,
+            116
+        ]
+    },
+    "Indonesia": {
+        "privacy": 2729,
+        "count": 562,
+        "opinion": [
+            256,
+            84,
+            148,
+            51,
+            23
+        ]
+    },
+    "Iran, Islamic Republic of": {
+        "privacy": 811,
+        "count": 162,
+        "opinion": [
+            67,
+            21,
+            42,
+            25,
+            7
+        ]
+    },
+    "Iraq": {
+        "privacy": 87,
+        "count": 17,
+        "opinion": [
+            11,
+            3,
+            2,
+            0,
+            1
+        ]
+    },
+    "Ireland": {
+        "privacy": 1384,
+        "count": 295,
+        "opinion": [
+            186,
+            29,
+            52,
+            13,
+            15
+        ]
+    },
+    "Isle of Man": {
+        "privacy": 53,
+        "count": 9,
+        "opinion": [
+            6,
+            0,
+            2,
+            0,
+            1
+        ]
+    },
+    "Israel": {
+        "privacy": 686,
+        "count": 130,
+        "opinion": [
+            57,
+            26,
+            25,
+            8,
+            14
+        ]
+    },
+    "Italy": {
+        "privacy": 130604,
+        "count": 21447,
+        "opinion": [
+            6232,
+            4027,
+            9048,
+            1061,
+            1079
+        ]
+    },
+    "Jamaica": {
+        "privacy": 68,
+        "count": 17,
+        "opinion": [
+            12,
+            2,
+            2,
+            1,
+            0
+        ]
+    },
+    "Japan": {
+        "privacy": 597,
+        "count": 129,
+        "opinion": [
+            67,
+            23,
+            22,
+            5,
+            12
+        ]
+    },
+    "Jersey": {
+        "privacy": 59,
+        "count": 13,
+        "opinion": [
+            7,
+            4,
+            1,
+            1,
+            0
+        ]
+    },
+    "Jordan": {
+        "privacy": 97,
+        "count": 20,
+        "opinion": [
+            9,
+            3,
+            6,
+            1,
+            1
+        ]
+    },
+    "Kazakhstan": {
+        "privacy": 46,
+        "count": 8,
+        "opinion": [
+            3,
+            4,
+            1,
+            0,
+            0
+        ]
+    },
+    "Kenya": {
+        "privacy": 991,
+        "count": 182,
+        "opinion": [
+            97,
+            16,
+            38,
+            27,
+            4
+        ]
+    },
+    "Korea, Republic of": {
+        "privacy": 145,
+        "count": 33,
+        "opinion": [
+            20,
+            5,
+            5,
+            1,
+            2
+        ]
+    },
+    "Kuwait": {
+        "privacy": 90,
+        "count": 17,
+        "opinion": [
+            5,
+            3,
+            6,
+            0,
+            3
+        ]
+    },
+    "Kyrgyzstan": {
+        "privacy": 2,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Lao People's Democratic Republic": {
+        "privacy": 29,
+        "count": 4,
+        "opinion": [
+            3,
+            0,
+            0,
+            1,
+            0
+        ]
+    },
+    "Latvia": {
+        "privacy": 137,
+        "count": 29,
+        "opinion": [
+            17,
+            7,
+            2,
+            3,
+            0
+        ]
+    },
+    "Lebanon": {
+        "privacy": 151,
+        "count": 34,
+        "opinion": [
+            15,
+            7,
+            8,
+            1,
+            3
+        ]
+    },
+    "Lesotho": {
+        "privacy": 16,
+        "count": 3,
+        "opinion": [
+            2,
+            0,
+            0,
+            1,
+            0
+        ]
+    },
+    "Liberia": {
+        "privacy": 16,
+        "count": 4,
+        "opinion": [
+            1,
+            0,
+            1,
+            2,
+            0
+        ]
+    },
+    "Libya": {
+        "privacy": 3,
+        "count": 1,
+        "opinion": [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Liechtenstein": {
+        "privacy": 39,
+        "count": 7,
+        "opinion": [
+            5,
+            2,
+            0,
+            0,
+            0
+        ]
+    },
+    "Lithuania": {
+        "privacy": 299,
+        "count": 51,
+        "opinion": [
+            25,
+            12,
+            9,
+            1,
+            4
+        ]
+    },
+    "Luxembourg": {
+        "privacy": 790,
+        "count": 164,
+        "opinion": [
+            92,
+            18,
+            29,
+            9,
+            16
+        ]
+    },
+    "Macedonia": {
+        "privacy": 79,
+        "count": 16,
+        "opinion": [
+            7,
+            3,
+            3,
+            2,
+            1
+        ]
+    },
+    "Madagascar": {
+        "privacy": 688,
+        "count": 125,
+        "opinion": [
+            41,
+            30,
+            35,
+            12,
+            7
+        ]
+    },
+    "Malawi": {
+        "privacy": 34,
+        "count": 8,
+        "opinion": [
+            6,
+            0,
+            0,
+            1,
+            1
+        ]
+    },
+    "Malaysia": {
+        "privacy": 1244,
+        "count": 247,
+        "opinion": [
+            131,
+            36,
+            46,
+            18,
+            16
+        ]
+    },
+    "Maldives": {
+        "privacy": 28,
+        "count": 5,
+        "opinion": [
+            1,
+            2,
+            1,
+            1,
+            0
+        ]
+    },
+    "Mali": {
+        "privacy": 128,
+        "count": 27,
+        "opinion": [
+            9,
+            9,
+            2,
+            5,
+            2
+        ]
+    },
+    "Malta": {
+        "privacy": 146,
+        "count": 31,
+        "opinion": [
+            12,
+            7,
+            7,
+            3,
+            2
+        ]
+    },
+    "Marshall Islands": {
+        "privacy": 2,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            1
+        ]
+    },
+    "Martinique": {
+        "privacy": 409,
+        "count": 79,
+        "opinion": [
+            40,
+            7,
+            21,
+            5,
+            6
+        ]
+    },
+    "Mauritania": {
+        "privacy": 10,
+        "count": 3,
+        "opinion": [
+            1,
+            0,
+            2,
+            0,
+            0
+        ]
+    },
+    "Mauritius": {
+        "privacy": 238,
+        "count": 47,
+        "opinion": [
+            29,
+            6,
+            7,
+            3,
+            2
+        ]
+    },
+    "Mayotte": {
+        "privacy": 73,
+        "count": 16,
+        "opinion": [
+            5,
+            6,
+            4,
+            0,
+            1
+        ]
+    },
+    "Mexico": {
+        "privacy": 25309,
+        "count": 4812,
+        "opinion": [
+            2465,
+            531,
+            1079,
+            448,
+            289
+        ]
+    },
+    "Micronesia, Federated States of": {
+        "privacy": 5,
+        "count": 1,
+        "opinion": [
+            0,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Moldova, Republic of": {
+        "privacy": 45,
+        "count": 10,
+        "opinion": [
+            5,
+            0,
+            4,
+            1,
+            0
+        ]
+    },
+    "Monaco": {
+        "privacy": 80,
+        "count": 17,
+        "opinion": [
+            6,
+            1,
+            8,
+            1,
+            1
+        ]
+    },
+    "Mongolia": {
+        "privacy": 54,
+        "count": 11,
+        "opinion": [
+            6,
+            1,
+            1,
+            0,
+            3
+        ]
+    },
+    "Montenegro": {
+        "privacy": 51,
+        "count": 11,
+        "opinion": [
+            6,
+            2,
+            0,
+            2,
+            1
+        ]
+    },
+    "Morocco": {
+        "privacy": 1713,
+        "count": 345,
+        "opinion": [
+            141,
+            66,
+            98,
+            25,
+            15
+        ]
+    },
+    "Mozambique": {
+        "privacy": 68,
+        "count": 11,
+        "opinion": [
+            3,
+            1,
+            4,
+            3,
+            0
+        ]
+    },
+    "Myanmar": {
+        "privacy": 182,
+        "count": 38,
+        "opinion": [
+            18,
+            8,
+            5,
+            7,
+            0
+        ]
+    },
+    "Namibia": {
+        "privacy": 91,
+        "count": 18,
+        "opinion": [
+            7,
+            1,
+            9,
+            0,
+            1
+        ]
+    },
+    "Nepal": {
+        "privacy": 393,
+        "count": 78,
+        "opinion": [
+            41,
+            9,
+            12,
+            13,
+            3
+        ]
+    },
+    "Netherlands": {
+        "privacy": 2881,
+        "count": 599,
+        "opinion": [
+            314,
+            99,
+            96,
+            37,
+            53
+        ]
+    },
+    "New Caledonia": {
+        "privacy": 607,
+        "count": 112,
+        "opinion": [
+            58,
+            11,
+            31,
+            4,
+            8
+        ]
+    },
+    "New Zealand": {
+        "privacy": 2355,
+        "count": 472,
+        "opinion": [
+            224,
+            83,
+            95,
+            20,
+            50
+        ]
+    },
+    "Nicaragua": {
+        "privacy": 514,
+        "count": 101,
+        "opinion": [
+            59,
+            6,
+            18,
+            14,
+            4
+        ]
+    },
+    "Niger": {
+        "privacy": 46,
+        "count": 11,
+        "opinion": [
+            5,
+            2,
+            1,
+            2,
+            1
+        ]
+    },
+    "Nigeria": {
+        "privacy": 878,
+        "count": 159,
+        "opinion": [
+            82,
+            19,
+            18,
+            35,
+            5
+        ]
+    },
+    "Northern Mariana Islands": {
+        "privacy": 5,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            0,
+            1,
+            0
+        ]
+    },
+    "Norway": {
+        "privacy": 880,
+        "count": 197,
+        "opinion": [
+            108,
+            33,
+            28,
+            8,
+            20
+        ]
+    },
+    "Oman": {
+        "privacy": 59,
+        "count": 13,
+        "opinion": [
+            6,
+            1,
+            5,
+            0,
+            1
+        ]
+    },
+    "Pakistan": {
+        "privacy": 906,
+        "count": 184,
+        "opinion": [
+            77,
+            39,
+            47,
+            13,
+            8
+        ]
+    },
+    "Panama": {
+        "privacy": 561,
+        "count": 112,
+        "opinion": [
+            60,
+            18,
+            22,
+            8,
+            4
+        ]
+    },
+    "Papua New Guinea": {
+        "privacy": 26,
+        "count": 6,
+        "opinion": [
+            4,
+            0,
+            0,
+            1,
+            1
+        ]
+    },
+    "Paraguay": {
+        "privacy": 926,
+        "count": 175,
+        "opinion": [
+            93,
+            26,
+            32,
+            19,
+            5
+        ]
+    },
+    "Peru": {
+        "privacy": 2855,
+        "count": 573,
+        "opinion": [
+            300,
+            58,
+            123,
+            63,
+            29
+        ]
+    },
+    "Philippines": {
+        "privacy": 1623,
+        "count": 321,
+        "opinion": [
+            185,
+            44,
+            56,
+            12,
+            24
+        ]
+    },
+    "Poland": {
+        "privacy": 765,
+        "count": 163,
+        "opinion": [
+            92,
+            26,
+            21,
+            5,
+            19
+        ]
+    },
+    "Portugal": {
+        "privacy": 1200,
+        "count": 253,
+        "opinion": [
+            131,
+            38,
+            58,
+            12,
+            14
+        ]
+    },
+    "Puerto Rico": {
+        "privacy": 292,
+        "count": 65,
+        "opinion": [
+            38,
+            6,
+            16,
+            5,
+            0
+        ]
+    },
+    "Qatar": {
+        "privacy": 124,
+        "count": 22,
+        "opinion": [
+            14,
+            2,
+            5,
+            0,
+            1
+        ]
+    },
+    "Reunion": {
+        "privacy": 1511,
+        "count": 291,
+        "opinion": [
+            162,
+            44,
+            58,
+            14,
+            13
+        ]
+    },
+    "Romania": {
+        "privacy": 1368,
+        "count": 263,
+        "opinion": [
+            132,
+            43,
+            55,
+            22,
+            11
+        ]
+    },
+    "Russian Federation": {
+        "privacy": 769,
+        "count": 139,
+        "opinion": [
+            64,
+            36,
+            26,
+            5,
+            8
+        ]
+    },
+    "Rwanda": {
+        "privacy": 58,
+        "count": 10,
+        "opinion": [
+            6,
+            0,
+            1,
+            3,
+            0
+        ]
+    },
+    "Saint Kitts and Nevis": {
+        "privacy": 7,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Saint Lucia": {
+        "privacy": 10,
+        "count": 2,
+        "opinion": [
+            1,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Saint Martin": {
+        "privacy": 8,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Saint Pierre and Miquelon": {
+        "privacy": 17,
+        "count": 6,
+        "opinion": [
+            3,
+            0,
+            0,
+            0,
+            3
+        ]
+    },
+    "Saint Vincent and the Grenadines": {
+        "privacy": 2,
+        "count": 1,
+        "opinion": [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "San Marino": {
+        "privacy": 90,
+        "count": 14,
+        "opinion": [
+            4,
+            1,
+            7,
+            0,
+            2
+        ]
+    },
+    "Sao Tome and Principe": {
+        "privacy": 0,
+        "count": 0,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Saudi Arabia": {
+        "privacy": 351,
+        "count": 66,
+        "opinion": [
+            24,
+            19,
+            17,
+            5,
+            1
+        ]
+    },
+    "Senegal": {
+        "privacy": 435,
+        "count": 89,
+        "opinion": [
+            42,
+            20,
+            16,
+            6,
+            5
+        ]
+    },
+    "Serbia": {
+        "privacy": 792,
+        "count": 149,
+        "opinion": [
+            74,
+            26,
+            34,
+            9,
+            6
+        ]
+    },
+    "Seychelles": {
+        "privacy": 9,
+        "count": 1,
+        "opinion": [
+            0,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Sierra Leone": {
+        "privacy": 22,
+        "count": 3,
+        "opinion": [
+            2,
+            0,
+            0,
+            1,
+            0
+        ]
+    },
+    "Singapore": {
+        "privacy": 733,
+        "count": 134,
+        "opinion": [
+            63,
+            22,
+            31,
+            10,
+            8
+        ]
+    },
+    "Sint Maarten (Dutch part)": {
+        "privacy": 0,
+        "count": 0,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Slovakia": {
+        "privacy": 229,
+        "count": 48,
+        "opinion": [
+            22,
+            11,
+            9,
+            3,
+            3
+        ]
+    },
+    "Slovenia": {
+        "privacy": 315,
+        "count": 63,
+        "opinion": [
+            33,
+            13,
+            12,
+            2,
+            3
+        ]
+    },
+    "Solomon Islands": {
+        "privacy": 9,
+        "count": 2,
+        "opinion": [
+            1,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Somalia": {
+        "privacy": 2,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "South Africa": {
+        "privacy": 1734,
+        "count": 343,
+        "opinion": [
+            175,
+            54,
+            64,
+            25,
+            25
+        ]
+    },
+    "South Sudan": {
+        "privacy": 8,
+        "count": 1,
+        "opinion": [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Spain": {
+        "privacy": 23036,
+        "count": 4287,
+        "opinion": [
+            2321,
+            581,
+            747,
+            305,
+            333
+        ]
+    },
+    "Sri Lanka": {
+        "privacy": 375,
+        "count": 69,
+        "opinion": [
+            33,
+            11,
+            13,
+            8,
+            4
+        ]
+    },
+    "Sudan": {
+        "privacy": 51,
+        "count": 11,
+        "opinion": [
+            7,
+            1,
+            2,
+            1,
+            0
+        ]
+    },
+    "Suriname": {
+        "privacy": 3,
+        "count": 1,
+        "opinion": [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Swaziland": {
+        "privacy": 17,
+        "count": 5,
+        "opinion": [
+            4,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Sweden": {
+        "privacy": 1340,
+        "count": 282,
+        "opinion": [
+            157,
+            43,
+            43,
+            16,
+            23
+        ]
+    },
+    "Switzerland": {
+        "privacy": 14598,
+        "count": 2891,
+        "opinion": [
+            1344,
+            412,
+            665,
+            191,
+            279
+        ]
+    },
+    "Syrian Arab Republic": {
+        "privacy": 52,
+        "count": 12,
+        "opinion": [
+            5,
+            3,
+            1,
+            3,
+            0
+        ]
+    },
+    "Tajikistan": {
+        "privacy": 3,
+        "count": 1,
+        "opinion": [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Tanzania, United Republic of": {
+        "privacy": 175,
+        "count": 36,
+        "opinion": [
+            18,
+            7,
+            4,
+            5,
+            2
+        ]
+    },
+    "Thailand": {
+        "privacy": 636,
+        "count": 125,
+        "opinion": [
+            54,
+            26,
+            22,
+            14,
+            9
+        ]
+    },
+    "Togo": {
+        "privacy": 175,
+        "count": 37,
+        "opinion": [
+            19,
+            10,
+            2,
+            4,
+            2
+        ]
+    },
+    "Tonga": {
+        "privacy": 5,
+        "count": 2,
+        "opinion": [
+            1,
+            1,
+            0,
+            0,
+            0
+        ]
+    },
+    "Trinidad and Tobago": {
+        "privacy": 146,
+        "count": 29,
+        "opinion": [
+            16,
+            3,
+            6,
+            3,
+            1
+        ]
+    },
+    "Tunisia": {
+        "privacy": 855,
+        "count": 164,
+        "opinion": [
+            77,
+            34,
+            37,
+            8,
+            8
+        ]
+    },
+    "Turkey": {
+        "privacy": 591,
+        "count": 119,
+        "opinion": [
+            68,
+            16,
+            15,
+            10,
+            10
+        ]
+    },
+    "Turks and Caicos Islands": {
+        "privacy": 4,
+        "count": 1,
+        "opinion": [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Uganda": {
+        "privacy": 186,
+        "count": 37,
+        "opinion": [
+            19,
+            5,
+            8,
+            2,
+            3
+        ]
+    },
+    "Ukraine": {
+        "privacy": 279,
+        "count": 52,
+        "opinion": [
+            30,
+            7,
+            7,
+            6,
+            2
+        ]
+    },
+    "United Arab Emirates": {
+        "privacy": 486,
+        "count": 104,
+        "opinion": [
+            59,
+            14,
+            23,
+            4,
+            4
+        ]
+    },
+    "United Kingdom": {
+        "privacy": 20170,
+        "count": 4088,
+        "opinion": [
+            2011,
+            862,
+            576,
+            194,
+            445
+        ]
+    },
+    "United States": {
+        "privacy": 74775,
+        "count": 15821,
+        "opinion": [
+            8254,
+            2561,
+            2393,
+            684,
+            1929
+        ]
+    },
+    "Uruguay": {
+        "privacy": 1766,
+        "count": 312,
+        "opinion": [
+            147,
+            40,
+            73,
+            35,
+            17
+        ]
+    },
+    "Uzbekistan": {
+        "privacy": 8,
+        "count": 1,
+        "opinion": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "Vanuatu": {
+        "privacy": 7,
+        "count": 2,
+        "opinion": [
+            2,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Venezuela": {
+        "privacy": 4762,
+        "count": 946,
+        "opinion": [
+            436,
+            109,
+            197,
+            155,
+            49
+        ]
+    },
+    "Vietnam": {
+        "privacy": 332,
+        "count": 64,
+        "opinion": [
+            39,
+            10,
+            7,
+            4,
+            4
+        ]
+    },
+    "Virgin Islands, U.S.": {
+        "privacy": 10,
+        "count": 3,
+        "opinion": [
+            1,
+            2,
+            0,
+            0,
+            0
+        ]
+    },
+    "Wallis and Futuna": {
+        "privacy": 0,
+        "count": 0,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Yemen": {
+        "privacy": 0,
+        "count": 0,
+        "opinion": [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "Zambia": {
+        "privacy": 83,
+        "count": 16,
+        "opinion": [
+            4,
+            4,
+            4,
+            3,
+            1
+        ]
+    },
+    "Zimbabwe": {
+        "privacy": 233,
+        "count": 41,
+        "opinion": [
+            16,
+            4,
+            9,
+            10,
+            2
+        ]
+    }
+}
