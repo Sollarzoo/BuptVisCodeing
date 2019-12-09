@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <title>Document</title>
+  <style>
+    #selectTool {
+      position: fixed;
+      top: 100px;
+      right: 200px;
+      /* right: 0;
+      bottom: 0; */
+      /* margin: 0 auto; */
+    }
+    #selectState {
+      position: fixed;
+      top: 160px;
+      right: 200px;
+    }
+
+    .popupBox {
+      background-color: #ffffff;
+      box-shadow: 0 0 2px 2px #999;
+      padding: 5px;
+      position: fixed;
+      top: 20px;
+      right: 200px;
+      width: 120px;
+      height: 40px;
+    }
+    #selectBenefits {
+      position: fixed;
+      top: 220px;
+      right: 200px;
+    }
+
+    #selectOptions {
+      position: fixed;
+      top: 280px;
+      right: 200px;
+    }
+
+    #selectWellness {
+      position: fixed;
+      top: 340px;
+      right: 200px;
+    }
+
+    #selectSeekHelp {
+      position: fixed;
+      top: 400px;
+      right: 200px;
+    }
+
+    #selectAnonymity {
+      position: fixed;
+      top: 460px;
+      right: 200px;
+    }
+
+    #selectLeave {
+      position: fixed;
+      top: 520px;
+      right: 200px;
+    }
+  </style>
+</head>
+<body>
+    <!-- <svg width='1000' height='1000'>
+        <path d="M200,300 Q400,50 600,300 T1000,300"
+        fill="none" stroke="red" stroke-width="5"  />
+    </svg> -->
+    <select name="" id="selectTool" onchange="changeOrder(this.id, this.value)">
+        <option value="none">年龄等</option>
+        <option value="age">Age</option>
+      <!-- <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    </select>
+    <select name="" id="selectBenefits" onchange="changeOrder(this.id, this.value)">
+        <option value="AllBenefits">benefits</option>
+        <option value="Yes">Yes</option>
+        <option value="Don't know">Don't know</option>
+        <option value="No">No</option>
+      <!-- <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    </select>
+    <select name="" id="selectOptions" onchange="changeOrder(this.id, this.value)">
+        <option value="AllBenefits">care_options</option>
+        <option value="Yes">Yes</option>
+        <option value="Not sure">Not sure</option>
+        <option value="No">No</option>
+      <!-- <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    </select>
+
+    <select name="" id="selectWellness" onchange="changeOrder(this.id, this.value)">
+        <option value="AllBenefits">wellness_program</option>
+        <option value="Yes">Yes</option>
+        <option value="Don't know">Don't know</option>
+        <option value="No">No</option>
+      <!-- <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    </select>
+
+    
+    <select name="" id="selectSeekHelp" onchange="changeOrder(this.id, this.value)">
+        <option value="AllBenefits">seek_help</option>
+        <option value="Yes">Yes</option>
+        <option value="Don't know">Don't know</option>
+        <option value="No">No</option>
+      <!-- <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    </select>
+
+    <select name="" id="selectAnonymity" onchange="changeOrder(this.id, this.value)">
+        <option value="AllBenefits">anonymity</option>
+        <option value="Yes">Yes</option>
+        <option value="Don't know">Don't know</option>
+        <option value="No">No</option>
+      <!-- <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    </select>
+
+    <select name="" id="selectLeave" onchange="changeOrder(this.id, this.value)">
+        <option value="AllBenefits">leave</option>
+        <option value="Very difficult">Very difficult</option>
+        <option value="Don't know">Very Don't know</option>
+        <option value="Somewhat easy">Somewhat easy</option>
+        <option value="Very easy">Very easy</option>
+      <!-- <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    </select>
+
+
+    <!-- <select name="" id="selectGender" onchange="changeOrder(this.id, this.value)">
+        <option value="AllBenefits">性别</option>
+        <option value="Very difficult">men</option>
+        <option value="Don't know">women</option>
+      <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    <!-- </select> -->
+
+    <select name="" id="selectState" onchange="changeOrder(this.id, this.value)">
+        <option value="AllCountry">国家</option>
+        <option value="WA">WA华盛顿</option>
+        <option value="OR">OR俄勒冈</option>
+        <option value="ID">ID爱达荷（X）</option>
+        <option value="CA">CA加利福尼亚</option>
+        <option value="NV">NV内华达（X）</option>
+        <option value="UT">UT犹他（X）</option>
+        <option value="WY">UY怀俄明（X）</option>
+        <option value="CO">CO科罗拉多</option>
+        <option value="AZ">AZ亚利桑那</option>
+        <option value="SD">SD南达科他（X）</option>
+        <option value="NE">NE内布拉斯加（X）</option>
+        <option value="KS">KS堪萨斯（X）</option>
+        <option value="OK">OK俄克拉荷马（X）</option>
+        <option value="NM">NM新墨西哥（X）</option>
+        <option value="TX">TX德克萨斯</option>
+        <option value="LA">LA路易斯安那（X）</option>
+        <option value="MO">MO密苏里</option>
+        <option value="IA">IA艾奥瓦（X）</option>
+        <option value="MN">MN明尼苏达</option>
+        <option value="TN">TN田纳西</option>
+        <option value="NY">NY纽约</option>
+        <option value="MA">MA马萨诸塞</option>
+        <option value="PA">PA宾夕法尼亚</option>
+        <option value="FL">FL弗洛里达</option>
+      <!-- <option value="Gender">Gender</option>
+      <option value="treatment">treatment</option> -->
+    </select>
+    <div class="totalBox"></div>
+    <div id="svgContainer"></div>
+    <div class="popupBox"></div>
+  <script>
+    var dataSet = [];
+    var width = 2000
+    var height = 9200
+    var svg = d3.select('#svgContainer').append('svg').attr('class','svgFlower').attr('width', width).attr('height', height)
+
+        /* 数组分段函数 */
+    function sliceArray(array, size) {
+      var result = []; //Math.ceil有多余的小数点都取最大整数
+        for (var x = 0; x < Math.ceil(array.length / size); x++) {
+          var start = x * size;
+          var end = start + size;
+          result.push(array.slice(start, end));
+        }
+        return result;
+    }
+
+    d3.csv('survey-csv (1).csv').then(function(rawData) {
+      dataSet = rawData
+      // console.log(dataSet) //有数据
+      let treatment = dataSet.filter(d=>{return d['treatment'] === 'No'})
+      draw(treatment)
+    })
+
+    function changeOrder(selectId, selectValue) {
+      if(selectId === 'selectTool') {
+        if(selectValue === 'age') {
+          /* 处理数据age排序 */
+          var dataSetForAge = JSON.parse(JSON.stringify(dataSet))
+          // console.log(dataSetForAge, 'dataSetForAge')
+          var dataSetSortByAge = dataSetForAge.sort(function(a, b) { return a.Age - b.Age })
+          var dataSetFilterByAge = dataSetSortByAge.filter(d=>{return d['state'] === 'CA'})
+          let tempLen = dataSetFilterByAge.length
+          // let tempLen = dataSetForAge.length
+          d3.select('.totalBox').node().innerHTML = '总数：' + tempLen
+          // console.log(dataSet, 'dataSet')
+          d3.selectAll('g').remove()
+          draw(dataSetFilterByAge)
+        }
+      } else if(selectId === 'selectState') {
+        changeState(selectValue)
+      } else if(selectId === 'selectBenefits') {
+        changeBenefits(selectValue, 'selectBenefits')
+      } else if(selectId === 'selectOptions') {
+        changeBenefits(selectValue, 'selectOptions')
+      } else if(selectId === 'selectWellness') {
+        changeBenefits(selectValue, 'selectWellness')
+      } else if(selectId === 'selectSeekHelp') {
+        changeBenefits(selectValue, 'selectSeekHelp')
+      } else if(selectId === 'selectAnonymity') {
+        changeBenefits(selectValue, 'selectAnonymity')
+      } else if (selectId === 'selectLeave') {
+        changeBenefits(selectValue, 'selectLeave')
+      }
+    }
+
+    function changeState(state) {
+      let dataSetForState = JSON.parse(JSON.stringify(dataSet))
+      if (state === 'AllCountry') {
+        var dataSetFilterByState = dataSetForState
+      } else {
+        var dataSetFilterByState = dataSetForState.filter(d=>{return d.state === state})
+      }
+      // console.log(dataSet, 'dataSet')
+      d3.selectAll('g').remove()
+      let tempLen = dataSetFilterByState.length
+      d3.select('.totalBox').node().innerHTML = '总数：' + tempLen
+      draw(dataSetFilterByState)
+    }
+
+    function changeBenefits(benefits, type) {
+      let dataSetForBenefits = JSON.parse(JSON.stringify(dataSet))
+      if (benefits === 'AllBenefits' ) {
+        var dataSetFilterByBenefits = dataSetForBenefits
+      } else if (type === 'selectBenefits'){
+        var dataSetFilterByBenefits = dataSetForBenefits.filter(d=>{return d['benefits'] === benefits})
+      } else if(type === 'selectOptions' ) {
+        var dataSetFilterByBenefits = dataSetForBenefits.filter(d=>{return d['care_options'] === benefits})
+      } else if(type === 'selectWellness' ) {
+        var dataSetFilterByBenefits = dataSetForBenefits.filter(d=>{return d['state'] === 'CA' && d['wellness_program'] === benefits})
+      } else if(type === 'selectSeekHelp' ) {
+        var dataSetFilterByBenefits = dataSetForBenefits.filter(d=>{return d['state'] === 'CA' && d['seek_help'] === benefits})
+      } else if(type === 'selectAnonymity' ) {
+        var dataSetFilterByBenefits = dataSetForBenefits.filter(d=>{return d['state'] === 'CA' && d['anonymity'] === benefits})
+      } else if (type === 'selectLeave') {
+        var dataSetFilterByBenefits = dataSetForBenefits.filter(d=>{return  d['leave'] === benefits})
+      }
+      // console.log(dataSet, 'dataSet')
+      d3.selectAll('g').remove()
+      let tempLen = dataSetFilterByBenefits.length
+      d3.select('.totalBox').node().innerHTML = '总数：' + tempLen
+      draw(dataSetFilterByBenefits)
+    }
+    
+    // console.log(ageList,'ageList')
+
+    function draw(dataSet) {
+        /* 开始分隔, 分割后的数据用来直接data()绑定,排序的转折点 */
+        var sampleNum = 30
+        var len = dataSet.length
+        var rowLen = len/sampleNum
+        /*求年龄最大值 最小值*/
+        var ageList = dataSet.map(function(d) {
+          let age = Number(d['Age'])
+          if(age > 0 && age < 100) {
+            return age
+          }
+        })
+
+        var rowDataSet = sliceArray(dataSet, sampleNum);
+    
+        /* 通过循环row数组达到每行绘制的效果 */
+        rowDataSet.forEach((item, i) => {
+        let row = svg.append('g').attr('rowKey', i).attr('transform', function() {
+          return 'translate(50, '+ (i+1)*100 +')'
+        })
+        let g = row.selectAll('.element').data(item).enter().append('g').attr('class','element')
+        .attr('transform', function(d, i) {
+          return 'translate(' + i*60 +','+ 0 +'), rotate(0)'
+        })
+        .on("mouseover", function(d, i) {
+          showPopup(d)
+          // console.log('000')
+        })
+
+        function showPopup(infoElem) {
+          let popupBox = document.getElementsByClassName('popupBox')[0]
+          let age = infoElem.Age
+          let noEmployees = infoElem['no_employees']
+          popupBox.innerHTML = age + '<br/>' +noEmployees
+          // console.log(infoElem)
+          popupBox.style.display = 'block'
+        }
+        // g.append('rect')
+        // .attr('height','35').attr('width','35')
+        // .attr('x','0').attr('y','-25')
+        // .attr('rx','5').attr('ry','5')
+        // .attr("transform", "rotate(45, 0, -25)")
+        // .attr('fill','black')
+
+        var sizeScale = d3.scaleLinear().domain([d3.min(ageList), d3.max(ageList)]).range([100, 1500]);
+        var transformScale = d3.scaleLinear().domain([d3.min(ageList), d3.max(ageList)]).range([.5, 1.8]);
+        //绘制菱形
+        var fruit = g.append('g').attr('class','fruit-wrapper')
+        fruit.append('path')
+        .attr('d', d3.symbol().type(d3.symbolDiamond).size(function(d) {
+          let age = Number(d['Age'])
+          if(d['Gender'] === 'Male' && d['obs_consequence'] !== 'Yes'&& age > 0 && age < 100) {
+            return sizeScale(Number(d['Age']))
+          } else {
+            return 0
+          }
+        }))
+        .attr('fill',function(d) {
+          if(d['Gender'] === 'Male' && d['obs_consequence'] !== 'Yes' && d['self_employed'] !== 'Yes') {
+            return '#8ac6d1' //蓝色
+          } else {
+            return '#eee'
+          }
+        })
+        .attr('stroke', '#8ac6d1')
+        .attr('fill-opacity', function(d, i) {
+          if(d['tech_company'] !== 'Yes') {
+            return '.2'
+          }
+        })
+        //恢复菱形的虚线
+        g.append('path')
+        .attr('d', d3.symbol().type(d3.symbolDiamond).size(function(d) {
+          let age = Number(d['Age'])
+          if(age > 0 && age < 100) {
+            return sizeScale(Number(d['Age'])+10)
+          } else {
+            return 0
+          }
+        }))
+        .attr('fill','transparent')
+        .attr('stroke',function(d) {
+          if(d['Gender'] === 'Male' && d['anonymity'] === 'Yes') {
+            return 'black'
+          } else {
+            return 'transparent'
+          }
+        })
+        .attr('stroke-dasharray','3')
+        .attr('stroke-width', 1)
+        .attr('stroke-opacity', '.5')
+        //家族史:恢复菱形的内部虚线
+        fruit.append('path')
+        .attr('d', d3.symbol().type(d3.symbolDiamond).size(function(d) {
+          let age = Number(d['Age'])
+          if(age > 0 && age < 100) {
+            return sizeScale(Number(d['Age'])-10)
+          } else {
+            return 0
+          }
+        }))
+        .attr('fill','transparent')
+        .attr('stroke',function(d) {
+          if(d['Gender'] === 'Male' && d['family_history'] === 'Yes') {
+            return 'white'
+          } else {
+            return 'transparent'
+          }
+        })
+        .attr('stroke-dasharray','3')
+        .attr('stroke-width', 1)
+        .attr('stroke-opacity', '.8')
+
+
+        // fruit.append('polygon')
+        // .attr('points', '0, 0, 5, 0, 10, -10').size(function(d) {
+        //   if(d['work_interfere'] === 'Often') {
+        //     return 70
+        //   } else if(d['work_interfere'] === 'Sometimes'){
+        //     return 50
+        //   } else if(d['work_interfere'] === 'Rarely') {
+        //     return 30
+        //   } else {
+        //     return 10
+        //   }
+        // })
+        // .attr('fill', 'purple')
+        // .attr("transform", "translate(0, 0) rotate(180)")
+
+        //干瘪的菱形
+        fruit.append('path')
+        // .attr('d', 'M0,-15 Q10,-16, 13,-5, 15,3, 10,10, 12,12, 10,10, 0,16, -5,12, -12,12, -8,8, -4,0, -12,-5, -15,-12, -5,-18, T0,-18')
+        .attr('d', function(d) {
+          if(d['obs_consequence'] === 'Yes' && d['Gender'] === 'Male' && d['self_employed'] !== 'Yes') {
+            return 'M0,-22, Q10,-16, 6,-5, 15,3, 8,8, 0,28, -3,10, -12,3, -12,0, -10,-10, -5,-18, T0,-22'
+          }
+        })
+        .attr('fill',function(d) {
+          if(d['Gender'] === 'Male') {
+            return '#16335F' //干瘪的蓝色
+          } else {
+            return '#eee'
+          }
+        })
+        .attr('transform', function(d, i) {
+          let age = Number(d['Age'])
+          if(age > 0 && age < 100) {
+            let num = transformScale(age).toFixed(2)
+            return 'scale('+ num +')'
+          } else {
+            return 0
+          }
+        })
+     
+        //恢复圆形
+        fruit.append('path')
+        .attr('d', d3.symbol().type(d3.symbolCircle).size(function(d) {
+          let age = Number(d['Age'])
+          if(age > 0 && age < 100) {
+            return sizeScale(Number(d['Age']))
+          } else {
+            return 0
+          }
+        }))
+        .attr('fill',function(d) {
+          if(d['Gender'] === 'Female' && d['obs_consequence'] !== 'Yes') {
+            return '#ffb6b9' //粉色
+          } else {
+            return 'transparent'
+          }
+        })
+        // .attr('stroke', '#ffb6b9')
+
+        //恢复圆形的虚线
+        g.append('path')
+        .attr('d', d3.symbol().type(d3.symbolCircle).size(function(d) {
+          let age = Number(d['Age'])
+          if(age > 0 && age < 100) {
+            return sizeScale(Number(d['Age'])+10)
+          } else {
+            return 0
+          }
+        }))
+        .attr('fill','transparent')
+        .attr('stroke',function(d) {
+          if(d['Gender'] !== 'Male' && d['anonymity'] === 'Yes') {
+            return 'black'
+          } 
+        })
+        .attr('stroke-dasharray','3')
+        .attr('stroke-width', 1)
+        .attr('stroke-opacity', '.5')
+        //家族史:恢复圆形的内部虚线
+        fruit.append('path')
+        .attr('d', d3.symbol().type(d3.symbolCircle).size(function(d) {
+          let age = Number(d['Age'])
+          if(age > 0 && age < 100) {
+            return sizeScale(Number(d['Age'])-10)
+          } else {
+            return 0
+          }
+        }))
+        .attr('fill','transparent')
+        .attr('stroke',function(d) {
+          if(d['Gender'] !== 'Male' && d['family_history'] === 'Yes') {
+            return 'white'
+          } 
+        })
+        .attr('stroke-dasharray','3')
+        .attr('stroke-width', 1)
+        .attr('stroke-opacity', '.8')
+      
+        // .attr('stroke','black')
+
+        //干瘪的圆形
+        fruit.append('path')
+        // .attr('d', 'M0,-15 Q10,-16, 13,-5, 15,3, 10,10, 12,12, 10,10, 0,16, -5,12, -12,12, -8,8, -4,0, -12,-5, -15,-12, -5,-18, T0,-18')
+        .attr('d', function(d) {
+          if(d['obs_consequence'] === 'Yes' && d['Gender'] !== 'Male') {
+            return 'M0,-15, Q10,-16, 6,-5, 15,3, 8,8, 0,15, -3,10, -12,3, -12,0, -10,-10, -5,-12, T0,-15'
+          } 
+        })
+        .attr('fill',function(d) {
+          if(d['Gender'] !== 'Male' && d['self_employed'] !== 'Yes') {
+            return '#8E0C24' //干瘪的粉红
+          } else {
+            return '#eee'
+          }
+        })
+        .attr('transform', function(d, i) {
+          let age = Number(d['Age'])
+          if(age > 0 && age < 100) {
+            let num = transformScale(age).toFixed(2)
+            return 'scale('+ num +')'
+          } else {
+            return 0
+          }
+        })
+        
+        // //裂痕 Never Rarely Sometimes Often NA
+        // g.append('path')
+        // // .attr('d', 'M0,-15 Q10,-16, 13,-5, 15,3, 10,10, 12,12, 10,10, 0,16, -5,12, -12,12, -8,8, -4,0, -12,-5, -15,-12, -5,-18, T0,-18')
+        // .attr('d', function(d) {
+        //   if(d['work_interfere'] === 'Rarely') {
+        //     return 'M-5,-25, L5,-25,0,-20,-5,-25'
+        //   } else if(d['work_interfere'] === 'Sometimes') {
+        //     return 'M-5,-25, L5,-25,0,-5,-5,-25'
+        //   }
+        // })
+        // .attr('fill','white')
+        // .attr('transform', function(d) {
+        //   let widthHeight = d3.select(this).getBBox()
+        //   console.log(widthHeight, 'widthHeight')
+        //   return 'translate(0, '+ widthHeight +')'
+        // })
+       
+        //裂痕
+        // fruit.append('path')
+        // .attr('d', d3.symbol().type(d3.symbolTriangle).size(function(d) {
+        //   if(d['work_interfere'] === 'Often') {
+        //     return 120
+        //   } else if(d['work_interfere'] === 'Sometimes'){
+        //     return 100
+        //   } else if(d['work_interfere'] === 'Rarely') {
+        //     return 80
+        //   } else {
+        //     return 60
+        //   }
+        // }))
+        // .attr('fill', 'white')
+        // .attr("transform", function(d,i) {
+        //   let boxInfo = d3.select(this.parentNode).node().getBBox()
+        //   let tempHeight = (boxInfo.height)/2
+        //   console.log(tempHeight, 'boxInfo')
+        //   return 'translate(0, ' + -(tempHeight-3) +') rotate(180)'
+        // })
+
+        fruit.append("ellipse")
+        .attr("rx", function(d, i) { 
+          if(d['work_interfere'] === 'Often') {
+            return 12
+          } else if(d['work_interfere'] === 'Sometimes'){
+            return 10
+          } else if(d['work_interfere'] === 'Rarely') {
+            return 8
+          } else {
+            return 0
+          }
+         })
+         .attr("ry", function(d, i) { 
+          if(d['work_interfere'] === 'Often') {
+            return 6
+          } else if(d['work_interfere'] === 'Sometimes'){
+            return 5
+          } else if(d['work_interfere'] === 'Rarely') {
+            return 4
+          } else {
+            return 0
+          }
+         })
+        // .attr('cy', function(d, i) {
+        //   let boxInfo = d3.select(this.parentNode).node().getBBox()
+        //   let tempHeight = (boxInfo.height)/2
+        //   return 
+        // })
+        .attr('fill', 'white')
+        .attr("transform", function(d,i) {
+          let boxInfo = d3.select(this.parentNode).node().getBBox()
+          let tempHeight = (boxInfo.height)/2
+          return 'translate(0, ' + -(tempHeight-5) +') rotate(90)'
+        })
+
+        //十字架
+        fruit.append('path')
+        .attr('d', d3.symbol().type(d3.symbolCross).size(200))
+        .attr('fill',function(d) {
+          // console.log(d['seek_help'])
+          if (d['care_options'] === 'Yes') {
+            return 'yellow'
+          } else {
+            return 'transparent'
+          }
+        })
+
+      
+        // g.append('rect')
+        // .attr('height','40').attr('width','40')
+        // .attr('x','0').attr('y','-29')
+        // .attr('rx','5').attr('ry','5')
+        // .attr("transform", "rotate(45, 0, -29)")
+        // .attr('fill','transparent')
+        // .attr('stroke','black')
+        // .attr('stroke-dasharray','3')
+        // .attr('stroke-width', '2')
+        // // .attr('stroke-opacity', '.5')
+
+        //身体潜在：绘制吐蕊 
+        g.append('path')
+        .attr('d', d3.symbol().type(d3.symbolTriangle).size(20))
+        .attr('fill',function(d) {
+          if(d['phys_health_consequence'] === 'Yes') {
+            return 'black'
+          } else {
+            return 'transparent'
+          }
+        })
+        // .attr('stroke', 'black')
+        .attr("transform", "translate(0, -32) rotate(-15, 0, -32)")
+
+        //身体潜在：绘制吐蕊 
+        g.append('path')
+        .attr('d', d3.symbol().type(d3.symbolTriangle).size(15))
+        .attr('stroke',function(d) {
+          if(d['phys_health_interview'] === 'Yes') {
+            return 'black'
+          }
+        })
+        .attr('fill', 'transparent')
+        .attr("transform", "translate(15, -25) rotate(0, 15, -25)")
+
+         //身体潜在：绘制吐蕊 
+         g.append('path')
+        .attr('d', d3.symbol().type(d3.symbolWye).size(15))
+        .attr('stroke',function(d) {
+          if(d['mental_health_interview'] === 'Yes') {
+            return 'black'
+          }
+        })
+        //.style("stroke-width", 10)
+        .attr('fill', 'transparent')
+        .attr("transform", "translate(-15, -25) rotate(0, -15, -25)")
+
+        //心理潜在：绘制吐蕊
+        g.append('path')
+        .attr('d', d3.symbol().type(d3.symbolWye).size(20))
+        .attr('fill',function(d) {
+          if(d['mental_health_consequence'] === 'Yes') {
+            return 'black'
+          } else {
+            return 'transparent'
+          }
+        })
+        .attr("transform", "translate(0, -32) rotate(15, 0, -32)")
+        //橙色爱心：绘制吐蕊
+        g.append('path')
+        .attr('d', d3.symbol().type(d3.symbolWye).size(20))
+        .attr('fill',function(d) {
+          if(d['mental_health_consequence'] === 'Yes') {
+            return '#eb5128'
+          } else {
+            return 'transparent'
+          }
+        })
+        .attr("transform", "translate(0, -38) rotate(0, 0, -38)")
+
+        //右边叶子
+        var littleGroup = g.append('g')
+        littleGroup.append("ellipse")
+        .attr("cx", -8)
+        .attr("cy", 20)
+        .attr("rx", 6)
+        .attr("ry", 3)
+        .attr("transform", "rotate(-40)")
+        .attr('fill-opacity', function(d) {
+          if(d['coworkers'] === 'Some of them' ) {
+            return .35
+          } else if (d['coworkers'] === 'No' ) {
+            return 0
+          }
+        })
+        //左边叶子
+        littleGroup.append("ellipse")
+        .attr("cx", 8)
+        .attr("cy", 20)
+        .attr("rx", 6)
+        .attr("ry", 3)
+        .attr("transform", "rotate(40)")
+        .attr('fill-opacity', function(d) {
+          if(d['supervisor'] === 'Some of them' ) {
+            return .35
+          } else if (d['coworkers'] === 'No' ) {
+            return 0
+          }
+        })
+
+        //茎
+        g.append('path')
+        .attr('d', function(d) {
+          if(d['remote_work'] === 'Yes') {
+            return 'M0,23 Q8,34,-2,50'
+          } else {
+            return 'M0,23 Q8,32,0,40'
+          }
+        })
+        .attr("stroke", "black")
+        .attr("stroke-width", function(d,i) {
+          if(d['no_employees'] === '1-5') {
+            return '1px'
+          } else if(d['no_employees'] === '6-25') {
+            return '2px'
+          } else if(d['no_employees'] === '26-100') {
+            return '3px'
+          } else if(d['no_employees'] === '100-500') {
+            return '4px'
+          } else if(d['no_employees'] === '500-1000') {
+            return '5px'
+          } else if(d['no_employees'] === 'More than 1000') {
+            return '6px'
+          } else {
+            return '0'
+          }
+        })
+        .attr("fill", "transparent")
+
+
+
+        // .attr('x1', 0).attr('y1', 22)
+        // .attr('x2', 10).attr('y2', function(d) {
+        //   if(d['remote_work'] === 'Yes') {
+        //     return 36
+        //   } else {
+        //     return 46
+        //   }
+        // })
+        // .attr('x3', 10).attr('y3', 70)
+        // .attr('curve', d3.curveCatmullRom.alpha(0.5))
+        
+
+        // var littleGroup = g.append('g')
+        // littleGroup.append("ellipse")
+        // .attr("cx", -5)
+        // .attr("cy", 25)
+        // .attr("rx", 10)
+        // .attr("ry", 4)
+        // .attr("transform", "rotate(-40)")
+        // littleGroup.append("ellipse")
+        // .attr("cx", 5)
+        // .attr("cy", 25)
+        // .attr("rx", 10)
+        // .attr("ry", 4)
+        // .attr("transform", "rotate(40)")
+
+        //绘制花蕊
+        // var stamen = g.append('g')
+        // stamen.append("ellipse")
+        // .attr("cx", 0)
+        // .attr("cy", -28)
+        // .attr("rx", 2)
+        // .attr("ry", 4)
+        // .attr("transform", "rotate(0,0,-28)")
+        // stamen.append("ellipse")
+        // .attr("cx", 2)
+        // .attr("cy", -26)
+        // .attr("rx", 2)
+        // .attr("ry", 4)
+        // .attr("transform", "rotate(45,2,-26)")
+        // stamen.append("ellipse")
+        // .attr("cx", -2)
+        // .attr("cy", -26)
+        // .attr("rx", 2)
+        // .attr("ry", 4)
+        // .attr("transform", "rotate(-45,-2,-26)")
+        g.on('click', function(d) {
+          console.log(d,'this')
+        })
+
+      })
+    }
+      // var g = svg.selectAll('.element').data(dataSet).enter().append('g').attr('class','element')
+      // .attr('transform', function(d, i) {
+      //   return 'translate(' + i*50 +','+ 10 +')'
+      // })
+
+
+  </script>
+  <!-- <script src="select.js"></script> -->
+</body>
+</html>
