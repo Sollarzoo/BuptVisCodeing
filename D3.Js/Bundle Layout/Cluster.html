@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v3.min.js" charset="UTF-8" ></script>
+    <title>捆图</title>
+    <style>
+
+            .node circle {
+              fill: rgb(209, 115, 71);
+              stroke: none;
+              
+            }
+        
+            .node {
+              font: 12px sans-serif;
+            }
+        
+            .link {
+              fill: none;
+              stroke: rgb(223, 223, 223);
+              stroke-width: 5px;
+            }
+          
+          </style>
+</head>
+<body>
+    <script>
+
+    var width = 2580;
+    var height = 1380;
+    var svg = d3.select("body")
+              .append("svg")
+              .attr("width",width)
+              .attr("height",height);
+
+    var gCluster = svg.append("g")
+                  .attr("transform","translate("+width/2+","+height/2+")");//设置弦图的中心
+
+       /* 创建集群图布局 */
+       var cluster = d3.layout.cluster()
+                    .size([360,width/4-200])
+                    .separation(function (a,b) {//设置相邻节点之间的间隔
+                        return(a.parent == b.parent?1:2)/a.depth;//帮助节点间隔成比例减少
+                    });
+
+        //创建一个放射状对角线生成器            
+        var diagonal = d3.svg.diagonal.radial()
+                         .projection(function(d){
+                             var radius = d.y, angle = d.x/180*Math.PI; //设置半径和角度，并将角度换算成弧度
+                             return[radius,angle];
+                        });
+
+
+        /* 载入数据 */
+        d3.json("city.json",function(error,root) {
+            var nodes = cluster.nodes(root);
+            var links = cluster.links(nodes);
+
+            console.log(root,"root");
+            console.log(nodes,"nodes");
+            console.log(links,"links");
+
+            /* 绘制连线 */
+            var link = gCluster.selectAll(".link")//点选类名
+                                .data(links)
+                                .enter()
+                                .append("path")
+                                .attr("class","link")
+                                .attr("d",diagonal)//使用对角线生成器
+                                // .attr("fill","none")
+                                // .attr("stroke","black")
+                                // .attr("stroke-width",3);
+            
+             /* 绘制节点和文字 */
+             var node = gCluster.selectAll(".node")//点选类名
+                                .data(nodes)
+                                .enter()
+                                .append("g")
+                                .attr("class","node")
+                                .attr("transform",function(d){
+                                    return "rotate("+(d.x-90)+")translate("+d.y+")";//先旋转（d.x-90）
+                                });
+            //绘制节点
+            node.append("circle")
+                .attr("r",10);
+            //添加文字
+            node.append("text")
+                .attr("transform",function(d){
+                    return d.x < 180 ? "translate(20)" : "rotate(180)translate(-20)";
+                    })
+                .attr("dy",3)//dy、dx是相对平移量（px）
+                .style("text-anchor",function(d){//text.anchor有三个值：start、middle、end
+                    return d.x < 180 ?"start":"end";//判断是否为叶子节点
+                })
+                .style("font-size",18)
+                .text(function(d){return d.name;});
+            
+        })
+
+        
+ 
+
+      
+    </script>
+</body>
+</html>
