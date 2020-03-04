@@ -3,36 +3,49 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://d3js.org/d3.v3.min.js" charset="UTF-8" ></script>
+    <script src="https://d3js.org/d3.v5.min.js" charset="UTF-8" ></script>
   
     <title>chords</title>
 </head>
 <body>
     <script>
-        var width = 1280;
+        var width = 1000;
         var height = 950;
         var svg=d3.select("body").append("svg").attr("width",width).attr("height",height);
-        var continent = ["Asia","Europe","Africa","America","Oceania"];
+        var continent = ["Asia", "Australia","Europe","North America","South America","Others",
+        "Best Actor","Best Actress","Best Director","Best Supporting Actor","Best Supporting Actress"];
         var population = [
-                            [9000,870,3000,1000,5200],
-                            [3400,8000,2300,4922,374],
-                            [2000,2000,7700,4881,1050],
-                            [3000,8012,5531,500,400],
-                            [3540,4310,1500,1900,300]
+                            [0,0,0,0,0,0,0,7,3,1,1],
+                            [0,0,0,0,0,0,1,1,0,1,1],
+                            [0,0,0,0,0,0,26,23,35,19,16],
+                            [0,0,0,0,0,0,59,63,52,58,65],
+                            [0,0,0,0,0,0,1,0,0,3,2],
+                            [0,0,0,0,0,0,1,1,1,0,0],
+                            [0,1,26,59,1,1,0,0,0,0,0],
+                            [7,1,23,63,0,1,0,0,0,0,0],
+                            [3,0,35,52,0,1,0,0,0,0,0],
+                            [1,1,19,58,3,0,0,0,0,0,0],
+                            [1,1,16,65,2,0,0,0,0,0,0]
                          ];
   //转换数据               
-        var chord = d3.layout.chord()
-                      .padding(0.03)//各节点间隔
-                      .sortSubgroups(d3.ascending)//节点所在行排序
-                      .matrix(population);//获取矩阵
+        var chord = d3.chord()
+                      .padAngle(0.03)//各节点间隔
+                      (population)//获取矩阵
+                      //.sortSubgroups(d3.ascending)//节点所在行排序
 
-        console.log(chord.groups());//查看节点数组
-        console.log(chord.chords());//查看弦数组
+        console.log(chord.groups);//查看节点数组
+        //console.log(chord);//查看弦数组
 
-//绘制图形
-        
+var title = svg.append("g")
+  .attr("transform","translate(500, 40)")
+  .append("text")
+  .text("Chord diagram")
+  .style("font-size", "28px")
+  .attr("text-anchor", "middle")
+
+//绘制图形        
 var gChord = svg.append("g")
-                .attr("transform","translate("+width/2+","+height/2+")");//设置弦图的中心
+                .attr("transform","translate(500, 540)");//设置弦图的中心
 
     //节点
     var gOuter = gChord.append("g");
@@ -43,76 +56,116 @@ var gChord = svg.append("g")
 /* 创建弧生成器 */
 
     //颜色比例尺
-    var color20 = d3.scale.category20();//有20种颜色
+    var color = ["#B5CF6B", "#6B6ECF", "#E7BA52", "#D6616B", "#9ECAE1", "#DE9ED6"];
+    legend = svg.append("g")
+    .attr("transform", "translate(800, 80)")
+    .selectAll("g")
+    .data(color)
+    .enter()
+    .append("g")
+    .attr("transform", function(d,i) { return "translate(0,"+i*30+")"; });
+
+    legend.append("rect")
+    .attr("height", 10)
+    .attr("width", 35)
+    .attr("fill", function(d) { return d; });
+
+    legend.append("text")
+    .attr("x", 50)
+    .attr("y", 10)
+    .text(function(d,i) {
+      return continent[i];
+    })
 
     //绘制节点
-    var innerRadius = width/2*0.5;
-    var outerRadius = innerRadius*1.1;
+    var innerRadius = width*0.3;
+    var outerRadius = innerRadius*1.05;
 
     //弧生成器
-    var arcOuter = d3.svg.arc()
-                     .innerRadius(innerRadius)
-                     .outerRadius(outerRadius);
+    var arcOuter = d3.arc()
+                     .innerRadius(innerRadius+8)
+                     .outerRadius(outerRadius+8);
 
     gOuter.selectAll(".outerPath")
-          .data(chord.groups())//绑定节点数组
+          .data(chord.groups)//绑定节点数组
           .enter()
           .append("path")
           .attr("class","outerPath")
-          .style("fill",function(d){return color20(d.index);})
+          .style("fill",function(d){
+            if (d.index<5) {
+                  return color[d.index];
+                } else return "#969696"
+          })
+          .style("fill-opacity", 0.75)
           .attr("d",arcOuter)//使用弧生成器
-          .attr("stroke", "#B3B3B3")
-          .attr("stroke-width", 1.5);
+          .attr("stroke", function(d){
+            if (d.index<5) {
+                  return color[d.index];
+                } else return "#969696"
+          });
 
     //添加文字
     gOuter.selectAll(".outerText")
-          .data(chord.groups())
+          .data(chord.groups)
           .enter()
-          .append("text")
+          .append("g")
           .each(function(d,i){      //为绑定的数据添加变量
               d.angle = (d.startAngle + d.endAngle)/2; //文字的角度  - 弧的中心角度
               d.name = continent[i];//节点名称
+              console.log(d.angle, i)
           })
+          .attr("transform",function(d){  //设定平移属性
+            //先旋转d.angle(将其转化为弧度)
+            var rotate = "rotate("+(d.angle*180/Math.PI-90)+")";
+            console.log(rotate)
+
+            //平移到外半径之外
+            var transform = "translate("+ 1.0*(outerRadius+20)+",0)";
+            return rotate+transform;
+          })
+          .append("text")
           .attr("class","outerText")
           .attr("dy",".35em")
-          .attr("transform",function(d){  //设定平移属性
-
-          //先旋转d.angle(将其转化为弧度)
-          var result = "rotate("+(d.angle*180/Math.PI)+")";
-
-          //平移到外半径之外
-          result += "translate(0,"+ -1.0*(outerRadius+10)+")";
-
-          //对位于弦图下方的文字，反转180°
-          if(d.angle>Math.PI*2/4 && d.angle<Math.PI*5/4)
-            result += "rotate(180)";
-
-         return result;
-
+          .attr("transform", function(d) {
+            if (d.angle > Math.PI) {
+              return "rotate(180)"
+            }
+            
           })
           .text(function(d){
               return d.name;
+          })
+          .attr("text-anchor", function(d) {
+            if (d.angle > Math.PI) {
+              return "end"
+            } else {
+              return "start"
+            }
           });
 
           //添加内部弦
-          var arcInner = d3.svg.chord()
-                           .radius(innerRadius);//设置弧半径
-         gInner.selectAll(".innerPath")
-               .data(chord.chords())//绑定弦数组
+          var arcInner = d3.ribbon()
+              .radius(innerRadius);//设置弧半径
+          gInner.selectAll(".innerPath")
+               .data(chord)//绑定弦数组
                .enter()
                .append("path")
                .attr("class","innerPath")
                .attr("d",arcInner)//使用弦生成器
-               .attr("stroke", "#B3B3B3")
-               .attr("stroke-width", 1.5)
+               .attr("stroke", function(d){
+                   return color[d.source.index];
+               })
+               //.attr("stroke-width", 1.5)
                .style("fill",function(d){
-                   return color20(d.source.index);
-               });
+                   return color[d.source.index];
+               })
+               .style("fill-opacity", 0.4)
+               .style("stroke-opacity", 0.8);
 
         //添加交互
         gOuter.selectAll(".outerPath")
-              .on("mouseover",fade(0.0))//鼠标放在节点上
-              .on("mouseout",fade(1.0))//鼠标从节点移开
+              // .on("mouseover",fade(0.0))//鼠标放在节点上
+              // .on("mouseout",fade(0.6))//鼠标从节点移开
         
         function fade(opacity){
             return function(g,i){
